@@ -33,7 +33,16 @@ fi
 # Clear VIRTUAL_ENV varibale
 unset VIRTUAL_ENV
 # Activate virtual environment
-source $VENV_DIR/bin/activate
+# Check if the 'activate' script exists in the specified locations
+if [ -f "$VENV_DIR/bin/activate" ]; then
+    source "$VENV_DIR/bin/activate"
+elif [ -f "$VENV_DIR/Scripts/activate" ]; then
+    source "$VENV_DIR/Scripts/activate"
+else
+    echo "Virtual environment activation script not found in the specified locations."
+fi
+
+# source $VENV_DIR/bin/activate
 
 # Check if the virtual environment is activated
 if [[ "$VIRTUAL_ENV" = "$PWD/$VENV_DIR" ]]; then
