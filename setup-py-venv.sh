@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TO BE RUN ON UNIX/MACOS use "source script-name.sh" command to run on shell
+# TO BE RUN ON UNIX/MACOS/GitBash-WINDOWS use "source script-name.sh" command to run on shell
 ##################################################################################################
 # This script will set you up a fresh virtual enviroment of your version of python installed     #
 # into your machine, if there is not already one with the DIR name of '.venv'. Virtual enviroment#
