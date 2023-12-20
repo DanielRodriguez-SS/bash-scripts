@@ -36,6 +36,7 @@ unset VIRTUAL_ENV
 # Check if the 'activate' script exists in the specified locations
 if [ -f "$VENV_DIR/bin/activate" ]; then
     source "$VENV_DIR/bin/activate"
+    pip install --upgrade pip
     # Check if the virtual environment is activated
     if [[ "$VIRTUAL_ENV" = "$PWD/$VENV_DIR" ]]; then
         echo "👍\033[1;32m Virtual environment '$VENV_DIR' is activated.\033[0m"
@@ -45,6 +46,7 @@ if [ -f "$VENV_DIR/bin/activate" ]; then
     fi
 elif [ -f "$VENV_DIR/Scripts/activate" ]; then
     source "$VENV_DIR/Scripts/activate"
+    pip install --upgrade pip
 else
     echo "Virtual environment activation script not found in the specified locations."
 fi
